@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja libre</title>
+    <link rel="stylesheet" href="libre.css">
+</head>
+
+<body>
+<h1>Usuario</h1>
+<img src="https://media.gettyimages.com/id/512810784/
+es/foto/la-segunda-guerra-mundial-world-war-ii-soldados
+-buscando-el-enemigo.jpg?s=612x612&w=0&k=20&c=KBMDFhYBpHv
+jgZ8xtOEu9TB05AmVZV66CZ2XwyvzI6k=" alt="imagen">
+
+{% for usuario in usuario_list%}
+<article>
+    <!--Mostramos información de dicho atributo del objeto Post.-->
+    <p>{{usuario.nombre}}</p>
+    <p>{{usuario.correo_Electronico}}</p>
+    <p>{{usuario.contrasena}}</p>
+    <p>{{usuario.fecha_Registro}}</p>
+    <p>{{usuario.biografia}}</p>
+    <p>{{usuario.foto_Perfil}}</p>
+
+<hr/>
+
+</article>
+{%  endfor %}
+</body>
+</html>
